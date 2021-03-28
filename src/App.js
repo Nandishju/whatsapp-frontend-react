@@ -8,6 +8,10 @@ import axios from './axios'
 function App() {
 
   const [messages, setMessages] = useState([]);
+  
+  useEffect(() => {
+    document.title = "Whatsapp-clone"
+ }, []);
 
   useEffect(() => {
     axios.get('/messages/details')
